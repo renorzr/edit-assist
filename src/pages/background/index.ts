@@ -9,3 +9,8 @@ reloadOnUpdate("pages/background");
 reloadOnUpdate("pages/content/style.scss");
 
 console.log("background loaded");
+
+console.log('chrome=', chrome.runtime.getManifest());
+chrome.commands.onCommand.addListener((command) => {
+  console.log("Command:", command);
+});

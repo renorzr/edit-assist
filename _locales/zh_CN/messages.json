@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message":"编辑助手"
+  },
+  "translateWindowTitle": {
+    "message":"翻译"
+  },
+  "completeWindowTitle": {
+    "message":"补全"
+  },
+  "summaryWindowTitle": {
+    "message":"概括"
+  },
+  "extendWindowTitle": {
+    "message":"扩展"
+  },
+  "polishWindowTitle": {
+    "message":"润色"
+  },
+  "translateButton": {
+    "message":"翻"
+  },
+  "completeButton": {
+    "message":"补"
+  },
+  "summaryButton": {
+    "message":"概"
+  },
+  "extendButton": {
+    "message":"扩"
+  },
+  "polishButton": {
+    "message":"润"
+  },
+  "optionsTitle": {
+    "message":"选项"
+  },
+  "Language": {
+    "message":"语言"
+  },
+  "UserLanguage": {
+    "message":"用户语言"
+  },
+  "SecondLanguage": {
+    "message":"第二语言"
+  },
+  "Auto": {
+    "message":"自动"
+  },
+  "close": {
+    "message": "关闭"
+  },
+  "paste": {
+    "message": "粘贴"
+  }
+}

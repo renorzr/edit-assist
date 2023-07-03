@@ -9,17 +9,33 @@ const manifest: chrome.runtime.ManifestV3 = {
   version: packageJson.version,
   description: packageJson.description,
   options_page: "src/pages/options/index.html",
+  default_locale: "zh_CN",
+  permissions: [
+    "storage",
+    "activeTab",
+    "contextMenus",
+    "scripting",
+  ],
   background: {
     service_worker: "src/pages/background/index.js",
     type: "module",
+  },
+  commands: {
+    toggle: {
+      suggested_key: {
+        default: "Ctrl+Shift+Y",
+        mac: "Command+Shift+Y",
+      },
+      description: "Toggle feature",
+    },
   },
   action: {
     default_popup: "src/pages/popup/index.html",
     default_icon: "icon-34.png",
   },
-  chrome_url_overrides: {
-    newtab: "src/pages/newtab/index.html",
-  },
+  // chrome_url_overrides: {
+  //   newtab: "src/pages/newtab/index.html",
+  // },
   icons: {
     "128": "icon-128.png",
   },

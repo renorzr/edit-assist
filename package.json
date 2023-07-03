@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-boilerplate-react-vite",
+  "name": "text-assist",
   "version": "0.0.1",
-  "description": "chrome extension boilerplate",
+  "description": "A Chrome extension that uses GPT to help users work with text in the browser.",
   "license": "MIT",
   "repository": {
     "type": "git",

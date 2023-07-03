@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message":"Edit Assist"
+  },
+  "translateWindowTitle": {
+    "message":"Translate"
+  },
+  "completeWindowTitle": {
+    "message":"Complete"
+  },
+  "summaryWindowTitle": {
+    "message":"Summary"
+  },
+  "extendWindowTitle": {
+    "message":"Extend"
+  },
+  "polishWindowTitle": {
+    "message":"Polish"
+  },
+  "translateButton": {
+    "message":"Tr"
+  },
+  "completeButton": {
+    "message":"Cm"
+  },
+  "summaryButton": {
+    "message":"Sm"
+  },
+  "extendButton": {
+    "message":"Ex"
+  },
+  "polishButton": {
+    "message":"Pl"
+  },
+  "optionsTitle": {
+    "message":"Options"
+  },
+  "Language": {
+    "message":"Language"
+  },
+  "UserLanguage": {
+    "message":"User Language"
+  },
+  "SecondLanguage": {
+    "message":"User Second Language"
+  },
+  "Auto": {
+    "message":"Auto"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "paste": {
+    "message": "Paste"
+  }
+}
