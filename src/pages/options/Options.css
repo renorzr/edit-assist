@@ -6,3 +6,22 @@
   align-items: center;
   justify-content: center;
 }
+
+label {
+  width: 100px;
+  display: inline-block;
+}
+
+.tip {
+  color: gray;
+  font-style: italic;
+  padding: 10px;
+}
+
+.user_setting_options {
+  padding: 10px;
+}
+
+.logo {
+  float: right;
+}

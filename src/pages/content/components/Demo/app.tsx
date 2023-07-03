@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import logo from "@assets/img/icon-menu.png";
 
 export default function App() {
   function makeDraggable(titleElement: any) {
@@ -40,7 +41,7 @@ export default function App() {
       const rect = node.parentElement.getBoundingClientRect();
       // find first child textarea or input of node.parentElement
       const input = node.parentElement.querySelector('textarea, input');
-      const text = input ? input.value : node.textContent;
+      const text = input ? input['value'] : node.textContent;
       showWindow("complete", rect, text);
       e.stopPropagation();
     } else if (e.code === 'Tab' && windowPosition) {
@@ -218,6 +219,7 @@ export default function App() {
         <button title={chrome.i18n.getMessage(type + 'WindowTitle')} className="menu-button" onClick={() => showWindow(type, menuPosition)}>
           {chrome.i18n.getMessage(type + 'Button')}
         </button>])}
+        <img className="icon" style={{position: 'absolute'}} src={logo} />
     </div> }
     { windowPosition && <div className="window" style={{top: windowPosition.y, left: windowPosition.x, position: 'absolute', zIndex: '1000'}}>
       <div className="title">

@@ -35,14 +35,17 @@
   "optionsTitle": {
     "message":"Options"
   },
-  "Language": {
-    "message":"Language"
+  "Translation": {
+    "message":"Translation"
   },
   "UserLanguage": {
     "message":"User Language"
   },
   "SecondLanguage": {
     "message":"User Second Language"
+  },
+  "SecondLanguageTip": {
+    "message":"If the selected text is the user language, it will be translated into the second language"
   },
   "Auto": {
     "message":"Auto"

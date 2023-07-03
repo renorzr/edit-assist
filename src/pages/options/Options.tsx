@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "@pages/options/Options.css";
+import logo from "@assets/img/icon-64.png";
 
 const LANGUAGES = [
   {code: 'en', name: 'English'},
@@ -45,24 +46,27 @@ const Options: React.FC = () => {
   }
 
   return <div className="OptionsContainer">
+    <div>
+      <h1><img src={logo} alt="logo"/>Text Assist</h1>
+      <hr/>
+    </div>
     <h2>{chrome.i18n.getMessage('optionsTitle')}</h2>
     <hr/>
-    <h3>{chrome.i18n.getMessage('Language')}</h3>
+    <h3>{chrome.i18n.getMessage('Translation')}</h3>
     <div className="user_setting_options">
-      <label>{chrome.i18n.getMessage('UserLanguage')}
-        <select className="user_setting_select" onChange={handleValueChange('userLanguage')} value={userLanguage}>
-          <option value="auto">{chrome.i18n.getMessage('Auto')}</option>
-          {LANGUAGES.map(language => <option value={language.code}>{language.name}</option>)}
-        </select>
-      </label>
+      <label>{chrome.i18n.getMessage('UserLanguage')}</label>
+      <select className="user_setting_select" onChange={handleValueChange('userLanguage')} value={userLanguage}>
+        <option value="auto">{chrome.i18n.getMessage('Auto')}</option>
+        {LANGUAGES.map(language => <option value={language.code}>{language.name}</option>)}
+      </select>
     </div>
     <div className="user_setting_options">
-      <label>{chrome.i18n.getMessage('SecondLanguage')}
-        <select className="user_setting_select" onChange={handleValueChange('secondLanguage')} value={secondLanguage}>
-          <option value="none">{chrome.i18n.getMessage('None')}</option>
-          {LANGUAGES.map(language => <option value={language.code}>{language.name}</option>)}
-        </select>
-      </label>
+      <label>{chrome.i18n.getMessage('SecondLanguage')}</label>
+      <select className="user_setting_select" onChange={handleValueChange('secondLanguage')} value={secondLanguage}>
+        <option value="none">{chrome.i18n.getMessage('None')}</option>
+        {LANGUAGES.map(language => <option value={language.code}>{language.name}</option>)}
+      </select>
+      <span className="tip">{chrome.i18n.getMessage('SecondLanguageTip')}</span>
     </div>
   </div>;
 };
