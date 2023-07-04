@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "@pages/options/Options.css";
 import logo from "@assets/img/icon-64.png";
-import { set } from "yaml/dist/schema/yaml-1.1/set";
 
 const LANGUAGES = [
   {code: 'en', name: 'English'},
