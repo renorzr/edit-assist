@@ -41,6 +41,9 @@
   "UserLanguage": {
     "message":"User Language"
   },
+  "UserLanguageTip": {
+    "message":"Translate the selected text into the user language"
+  },
   "SecondLanguage": {
     "message":"User Second Language"
   },
@@ -50,10 +53,16 @@
   "Auto": {
     "message":"Auto"
   },
+  "None": {
+    "message":"None"
+  },
   "close": {
     "message": "Close"
   },
   "paste": {
     "message": "Paste"
+  },
+  "noApiKey": {
+    "message": "Please set your GPT OpenAI API key in the extension options page."
   }
 }

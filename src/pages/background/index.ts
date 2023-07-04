@@ -8,9 +8,15 @@ reloadOnUpdate("pages/background");
  */
 reloadOnUpdate("pages/content/style.scss");
 
-console.log("background loaded");
+console.log(new Date(), "background loaded");
 
-console.log('chrome=', chrome.runtime.getManifest());
 chrome.commands.onCommand.addListener((command) => {
   console.log("Command:", command);
+});
+
+chrome.runtime.onMessage.addListener((request) => {
+  console.log("Message:", request);
+  if (request === "showOptions") {
+    chrome.runtime.openOptionsPage();
+  }
 });

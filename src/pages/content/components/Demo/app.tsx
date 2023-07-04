@@ -142,32 +142,24 @@ export default function App() {
   function doComplete(text: string): Promise<string[]> {
     return callGPT({
           prompt: 'I want to complete this text: ' + text,
-          max_tokens: 100,
-          model: 'text-davinci-003',
     });
   }
 
   function doSummary(text: string): Promise<string[]> {
     return callGPT({
           prompt: 'I want to summary this text: ' + text,
-          max_tokens: 1000,
-          model: 'text-davinci-003',
     });
   }
 
   function doExtend(text: string): Promise<string[]> {
     return callGPT({
           prompt: 'I want to extend this text: ' + text,
-          max_tokens: 1000,
-          model: 'text-davinci-003',
     });
   }
 
   function doPolish(text: string): Promise<string[]> {
     return callGPT({
           prompt: 'I want to polish this text: ```' + text + '```',
-          max_tokens: 1000,
-          model: 'text-davinci-003',
     });
   }
 
@@ -179,17 +171,37 @@ export default function App() {
   // call GPT API
   async function callGPT(params: {[key: string]: any}): Promise<string[]> {
     const apiUrl = 'https://api.openai.com/v1/completions';
+    const options = await chrome.storage.sync.get();
+    console.log('options', options);
+    const apiKey = options.gptApiKey;
+
+    if (!apiKey) {
+      if (confirm(chrome.i18n.getMessage('noApiKey'))) {
+        chrome.runtime.sendMessage("showOptions");
+      }
+      return [chrome.i18n.getMessage('noApiKey')];
+    }
+
+    params.model = options.model || 'text-davinci-003';
+    params.max_tokens = options.max_tokens || 1000;
+    params.temperature = options.temperature || 0.7;
   
     try {
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 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',
+          'Authorization': 'Bearer ' + apiKey,
         },
         body: JSON.stringify(params),
       });
   
+      if (!response.ok) {
+        const data = await response.json();
+        console.error('Error calling ChatGPT API:', data.error.message);
+        return ['Error:', data.error.message];
+      }
+
       const data = await response.json();
       return [data.choices[0].text.trim()];
     } catch (error) {
@@ -219,13 +231,15 @@ export default function App() {
         <button title={chrome.i18n.getMessage(type + 'WindowTitle')} className="menu-button" onClick={() => showWindow(type, menuPosition)}>
           {chrome.i18n.getMessage(type + 'Button')}
         </button>])}
-        <img className="icon" style={{position: 'absolute'}} src={logo} />
+        <img className="icon" style={{position: 'absolute'}} src={logo} onClick={() => {
+          chrome.runtime.sendMessage("showOptions");
+        }}/>
     </div> }
     { windowPosition && <div className="window" style={{top: windowPosition.y, left: windowPosition.x, position: 'absolute', zIndex: '1000'}}>
       <div className="title">
         {chrome.i18n.getMessage(windowType + 'WindowTitle')}
-        <button className="close" title={chrome.i18n.getMessage("close")} onClick={() => setWindowPosition(null)}>x</button>
-        <button className="paste" title={chrome.i18n.getMessage("paste")} onClick={() => {paste(); setWindowPosition(null)}}>p</button>
+        <button className="close" title={chrome.i18n.getMessage("close")} onClick={() => setWindowPosition(null)}>&#10006;</button>
+        <button className="paste" title={chrome.i18n.getMessage("paste")} onClick={() => {paste(); setWindowPosition(null)}}>&#128203;</button>
       </div>
       <div className="body">
       {lines.map(line => <p>{line}</p>)}
