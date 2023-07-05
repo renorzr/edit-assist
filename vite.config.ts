@@ -19,7 +19,11 @@ const isProduction = !isDev;
 // ENABLE HMR IN BACKGROUND SCRIPT
 const enableHmrInBackgroundScript = true;
 
+const contentScriptCssKey = regenerateCacheInvalidationKey();
 export default defineConfig({
+  define: {
+    'process.env': { contentScriptCssKey },
+  },
   resolve: {
     alias: {
       "@src": root,
@@ -31,7 +35,7 @@ export default defineConfig({
     react(),
     makeManifest(manifest, {
       isDev,
-      contentScriptCssKey: regenerateCacheInvalidationKey(),
+      contentScriptCssKey,
     }),
     customDynamicImport(),
     addHmr({ background: enableHmrInBackgroundScript, view: true }),

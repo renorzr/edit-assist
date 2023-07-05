@@ -8,15 +8,45 @@ reloadOnUpdate("pages/background");
  */
 reloadOnUpdate("pages/content/style.scss");
 
-console.log(new Date(), "background loaded");
+console.log(new Date(), "background loaded", process.env);
 
-chrome.commands.onCommand.addListener((command) => {
-  console.log("Command:", command);
+chrome.runtime.onInstalled.addListener(() => {
+  console.log("onInstalled");
+
+  chrome.commands.onCommand.addListener((command) => {
+    console.log("Command:", command);
+  });
+
+  chrome.runtime.onMessage.addListener((request) => {
+    console.log("Message:", request);
+    if (request === "showOptions") {
+      chrome.runtime.openOptionsPage();
+    }
+  });
+
+  console.log("contextMenus.create");
+  chrome.contextMenus.create({
+    id: 'text-assist',
+    title: 'Text Assist',
+    type: 'normal',
+    contexts: ['selection']
+  });
 });
 
-chrome.runtime.onMessage.addListener((request) => {
-  console.log("Message:", request);
-  if (request === "showOptions") {
-    chrome.runtime.openOptionsPage();
-  }
+chrome.contextMenus.onClicked.addListener(function (clickData) {
+  console.log('menu clicked', clickData);
+
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    console.log('active tabs', tabs);
+    tabs.forEach(tab => {
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ['src/pages/content/index.js']
+      });
+      chrome.scripting.insertCSS({
+        target: { tabId: tab.id },
+        files: [`assets/css/contentStyle${process.env['contentScriptCssKey']}.chunk.css`],
+      });
+    });
+  });
 });

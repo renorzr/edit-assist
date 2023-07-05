@@ -56,6 +56,10 @@ export default function App() {
       return;
     }
 
+    showWindowIfSelected(e);
+  }
+
+  function showWindowIfSelected(e: any) {
     const text = window.getSelection()?.toString();
     if (text) {
       setMenuPosition({x: e.pageX + 4, y: e.pageY + 4});
@@ -217,6 +221,11 @@ export default function App() {
 
   useEffect(() => {
     console.log("content view loaded");
+
+  document.onmousemove = function (e) {
+    showWindowIfSelected(e);
+    document.onmousemove = null;
+  };
   }, []);
 
   useEffect(() => {

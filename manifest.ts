@@ -13,6 +13,8 @@ const manifest: chrome.runtime.ManifestV3 = {
   permissions: [
     "storage",
     "activeTab",
+    "contextMenus",
+    "scripting",
   ],
   background: {
     service_worker: "src/pages/background/index.js",
@@ -33,14 +35,6 @@ const manifest: chrome.runtime.ManifestV3 = {
   icons: {
     "128": "icon-128.png",
   },
-  content_scripts: [
-    {
-      matches: ["<all_urls>"],
-      js: ["src/pages/content/index.js"],
-      // KEY for cache invalidation
-      css: ["assets/css/contentStyle<KEY>.chunk.css"],
-    },
-  ],
   devtools_page: "src/pages/devtools/index.html",
   web_accessible_resources: [
     {
