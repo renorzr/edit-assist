@@ -3,16 +3,16 @@ import "@pages/options/Options.css";
 import logo from "@assets/img/icon-64.png";
 
 const LANGUAGES = [
-  {code: 'en', name: 'English'},
-  {code: 'zh', name: '中文'},
-  {code: 'ja', name: '日本語'},
-  {code: 'ko', name: '한국어'},
-  {code: 'fr', name: 'Français'},
-  {code: 'de', name: 'Deutsch'},
-  {code: 'es', name: 'Español'},
-  {code: 'pt', name: 'Português'},
-  {code: 'it', name: 'Italiano'},
-  {code: 'ru', name: 'Русский'},
+  { code: 'en', name: 'English', en: 'English' },
+  { code: 'es', name: 'Español', en: 'Spanish' },
+  { code: 'fr', name: 'Français', en: 'French' },
+  { code: 'de', name: 'Deutsch', en: 'German' },
+  { code: 'it', name: 'Italiano', en: 'Italian' },
+  { code: 'pt', name: 'Português', en: 'Portuguese' },
+  { code: 'ru', name: 'Русский', en: 'Russian' },
+  { code: 'zh', name: '中文', en: 'Chinese' },
+  { code: 'ja', name: '日本語', en: 'Japanese' },
+  { code: 'ko', name: '한국어', en: 'Korean' }
 ];
 
 const Options: React.FC = () => {

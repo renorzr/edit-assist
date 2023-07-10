@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Текстовый Помощник"
+  },
+  "translateWindowTitle": {
+    "message": "Перевести"
+  },
+  "completeWindowTitle": {
+    "message": "Завершить"
+  },
+  "summaryWindowTitle": {
+    "message": "Сводка"
+  },
+  "extendWindowTitle": {
+    "message": "Расширить"
+  },
+  "polishWindowTitle": {
+    "message": "Полировать"
+  },
+  "translateButton": {
+    "message": "Пер"
+  },
+  "completeButton": {
+    "message": "Зав"
+  },
+  "summaryButton": {
+    "message": "Св"
+  },
+  "extendButton": {
+    "message": "Рас"
+  },
+  "polishButton": {
+    "message": "Пол"
+  },
+  "optionsTitle": {
+    "message": "Настройки"
+  },
+  "Translation": {
+    "message": "Перевод"
+  },
+  "UserLanguage": {
+    "message": "Язык пользователя"
+  },
+  "UserLanguageTip": {
+    "message": "Перевести выбранный текст на язык пользователя"
+  },
+  "SecondLanguage": {
+    "message": "Второй язык пользователя"
+  },
+  "SecondLanguageTip": {
+    "message": "Если выбранный текст является языком пользователя, он будет переведен на второй язык"
+  },
+  "Auto": {
+    "message": "Авто"
+  },
+  "None": {
+    "message": "Нет"
+  },
+  "close": {
+    "message": "Закрыть"
+  },
+  "paste": {
+    "message": "Вставить"
+  },
+  "noApiKey": {
+    "message": "Пожалуйста, установите ваш ключ API GPT OpenAI на странице настроек расширения."
+  }
+}

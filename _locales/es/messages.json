@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Asistente de Texto"
+  },
+  "translateWindowTitle": {
+    "message": "Traducir"
+  },
+  "completeWindowTitle": {
+    "message": "Completar"
+  },
+  "summaryWindowTitle": {
+    "message": "Resumen"
+  },
+  "extendWindowTitle": {
+    "message": "Ampliar"
+  },
+  "polishWindowTitle": {
+    "message": "Pulir"
+  },
+  "translateButton": {
+    "message": "Tr"
+  },
+  "completeButton": {
+    "message": "Cm"
+  },
+  "summaryButton": {
+    "message": "Sm"
+  },
+  "extendButton": {
+    "message": "Ex"
+  },
+  "polishButton": {
+    "message": "Pl"
+  },
+  "optionsTitle": {
+    "message": "Opciones"
+  },
+  "Translation": {
+    "message": "Traducción"
+  },
+  "UserLanguage": {
+    "message": "Idioma del Usuario"
+  },
+  "UserLanguageTip": {
+    "message": "Traduce el texto seleccionado al idioma del usuario"
+  },
+  "SecondLanguage": {
+    "message": "Segundo Idioma del Usuario"
+  },
+  "SecondLanguageTip": {
+    "message": "Si el texto seleccionado es el idioma del usuario, se traducirá al segundo idioma"
+  },
+  "Auto": {
+    "message": "Automático"
+  },
+  "None": {
+    "message": "Ninguno"
+  },
+  "close": {
+    "message": "Cerrar"
+  },
+  "paste": {
+    "message": "Pegar"
+  },
+  "noApiKey": {
+    "message": "Por favor, establece tu clave de API de GPT OpenAI en la página de opciones de la extensión."
+  }
+}

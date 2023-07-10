@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message":"Text Assist"
+  },
+  "translateWindowTitle": {
+    "message":"Übersetzen"
+  },
+  "completeWindowTitle": {
+    "message":"Vervollständigen"
+  },
+  "summaryWindowTitle": {
+    "message":"Zusammenfassung"
+  },
+  "extendWindowTitle": {
+    "message":"Erweitern"
+  },
+  "polishWindowTitle": {
+    "message":"Polieren"
+  },
+  "translateButton": {
+    "message":"Üb"
+  },
+  "completeButton": {
+    "message":"Vo"
+  },
+  "summaryButton": {
+    "message":"Zu"
+  },
+  "extendButton": {
+    "message":"Er"
+  },
+  "polishButton": {
+    "message":"Pl"
+  },
+  "optionsTitle": {
+    "message":"Optionen"
+  },
+  "Translation": {
+    "message":"Übersetzung"
+  },
+  "UserLanguage": {
+    "message":"Benutzersprache"
+  },
+  "UserLanguageTip": {
+    "message":"Übersetzen Sie den ausgewählten Text in die Benutzersprache"
+  },
+  "SecondLanguage": {
+    "message":"Zweite Sprache"
+  },
+  "SecondLanguageTip": {
+    "message":"Wenn der ausgewählte Text die Benutzersprache ist, wird er in die zweite Sprache übersetzt"
+  },
+  "Auto": {
+    "message":"Automatisch"
+  },
+  "None": {
+    "message":"Keine"
+  },
+  "close": {
+    "message": "Schließen"
+  },
+  "paste": {
+    "message": "Einfügen"
+  },
+  "noApiKey": {
+    "message": "Bitte geben Sie Ihren GPT OpenAI API-Schlüssel in den Erweiterungsoptionen ein."
+  }
+}

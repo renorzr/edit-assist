@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "텍스트 어시스트"
+  },
+  "translateWindowTitle": {
+    "message": "번역"
+  },
+  "completeWindowTitle": {
+    "message": "완성"
+  },
+  "summaryWindowTitle": {
+    "message": "요약"
+  },
+  "extendWindowTitle": {
+    "message": "확장"
+  },
+  "polishWindowTitle": {
+    "message": "다듬기"
+  },
+  "translateButton": {
+    "message": "번"
+  },
+  "completeButton": {
+    "message": "완"
+  },
+  "summaryButton": {
+    "message": "요"
+  },
+  "extendButton": {
+    "message": "확"
+  },
+  "polishButton": {
+    "message": "다"
+  },
+  "optionsTitle": {
+    "message": "옵션"
+  },
+  "Translation": {
+    "message": "번역"
+  },
+  "UserLanguage": {
+    "message": "사용자 언어"
+  },
+  "UserLanguageTip": {
+    "message": "선택한 텍스트를 사용자 언어로 번역합니다"
+  },
+  "SecondLanguage": {
+    "message": "사용자의 두 번째 언어"
+  },
+  "SecondLanguageTip": {
+    "message": "선택한 텍스트가 사용자 언어와 동일한 경우, 두 번째 언어로 번역됩니다"
+  },
+  "Auto": {
+    "message": "자동"
+  },
+  "None": {
+    "message": "없음"
+  },
+  "close": {
+    "message": "닫기"
+  },
+  "paste": {
+    "message": "붙여넣기"
+  },
+  "noApiKey": {
+    "message": "GPT OpenAI API 키를 확장 프로그램 옵션 페이지에서 설정해주세요."
+  }
+}

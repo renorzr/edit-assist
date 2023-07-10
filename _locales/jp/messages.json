@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "テキストアシスト"
+  },
+  "translateWindowTitle": {
+    "message": "翻訳"
+  },
+  "completeWindowTitle": {
+    "message": "補完"
+  },
+  "summaryWindowTitle": {
+    "message": "要約"
+  },
+  "extendWindowTitle": {
+    "message": "拡張"
+  },
+  "polishWindowTitle": {
+    "message": "磨き"
+  },
+  "translateButton": {
+    "message": "訳"
+  },
+  "completeButton": {
+    "message": "補"
+  },
+  "summaryButton": {
+    "message": "要"
+  },
+  "extendButton": {
+    "message": "拡"
+  },
+  "polishButton": {
+    "message": "磨"
+  },
+  "optionsTitle": {
+    "message": "オプション"
+  },
+  "Translation": {
+    "message": "翻訳"
+  },
+  "UserLanguage": {
+    "message": "ユーザー言語"
+  },
+  "UserLanguageTip": {
+    "message": "選択したテキストをユーザーの言語に翻訳します"
+  },
+  "SecondLanguage": {
+    "message": "ユーザー第二言語"
+  },
+  "SecondLanguageTip": {
+    "message": "選択したテキストがユーザー言語の場合、第二言語に翻訳されます"
+  },
+  "Auto": {
+    "message": "自動"
+  },
+  "None": {
+    "message": "なし"
+  },
+  "close": {
+    "message": "閉じる"
+  },
+  "paste": {
+    "message": "貼り付け"
+  },
+  "noApiKey": {
+    "message": "GPT OpenAIのAPIキーを拡張のオプションページで設定してください。"
+  }
+}

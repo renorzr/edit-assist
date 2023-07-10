@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message":"编辑助手"
+    "message":"文本助手"
   },
   "translateWindowTitle": {
     "message":"翻译"
@@ -18,7 +18,7 @@
     "message":"润色"
   },
   "translateButton": {
-    "message":"翻"
+    "message":"译"
   },
   "completeButton": {
     "message":"补"
@@ -42,13 +42,13 @@
     "message":"用户语言"
   },
   "UserLanguageTip": {
-    "message":"将选中的文字翻译为用户语言"
+    "message":"将选中的文本翻译为用户语言"
   },
   "SecondLanguage": {
     "message":"第二语言"
   },
   "SecondLanguageTip": {
-    "message":"如果选中的文字是用户语言，将会翻译为第二语言"
+    "message":"如果选中的文本是用户语言，将会翻译为第二语言"
   },
   "Auto": {
     "message":"自动"
